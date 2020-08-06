@@ -106,13 +106,84 @@ input[type=text] {
 }
 #section2{
     width: 100%;
+    height: 603px;
     display: inline-block;
     /* border: 2px solid blue; */
+    background-image: url(../images/hbg5.png);
+    background-repeat: no-repeat;
+    /* text-align: center; */
+    /* padding-top: 300px; */
+}
+#section2 #work{
+    width: auto;
+    display: inline-block;
+    /* border: 2px solid blue; */
+    margin-top: 30px;
+    padding-left: 0px;
+    margin-left: 480px;
+}
+.number{
+    /* margin-top: 300px; */
+    float: left;
+    /* border: 2px solid red; */
+    width: 18%;
+    margin-left: 0px;
+}
+.line{
+    float: left;
+    /* border: 2px solid red; */
+    width: 16%;
+    margin-top: 48px;
+}
+.step{
+    text-align: center;
+    color: white;
+}
+.tooltip{
+    /* height: 80px; */
+    /* border: 2px solid blue; */
+    background-image: url(../images/tooltip-bg.png);
+    background-repeat: no-repeat;
+    /* text-align: center; */
+    padding-top: 23px;
+    padding-left: 24px;
+    
+}
+#no1{
+    filter:invert(30%);
+}
+.tooltip:hover {
+    background-image: url(../images/tooltip-hover.png);
+}
+.tooltip:hover #text1{
+    opacity: 1;
+}
+#text1{
+    margin-left: -40px;
+    margin-top: 40px;
+    width: 150%;
+    border: 2px solid green;
+    border-radius: 10px;
+    padding:0 15px;
+    opacity: 0;
+    background-color: white;
+}
+#section2 #text{
+    /* width: 100%; */
+    width: 50%;
+    /* border: 2px solid red; */
+    margin-left: 200px;
+    margin-top: 150px;
+    color: white;
+    text-align: center;
+}
+#section2 #p1{
+    font-size: xx-large;
+}
+#section2 #p2{
+    font-size: x-large;
 }
 
-#section2 img{
-    width: 100%;
-}
 #section3{
     width: 100%;
     /* height: 500px; */
