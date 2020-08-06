@@ -29,7 +29,7 @@ input[type=text] {
     border: 2px solid #ccc;
     border-radius: 4px;
     background-color: white;
-    background-image: url(/images/top_search.png);
+    background-image: url(../images/top_search.png);
     background-position: 180px 5px; 
     background-repeat: no-repeat;
     padding: 12px 20px 12px 40px;
@@ -85,7 +85,7 @@ input[type=text] {
     padding: 25px;
 }
 #text ul{
-    list-style-image: url(/images/arrow1.png);
+    list-style-image: url(../images/arrow1.png);
     padding-left:25px;
     margin: 0;
 }
@@ -100,7 +100,7 @@ input[type=text] {
     background-color: #334d00;
 }
 #aboutus #contactus{
-    background-image: url(/images/icon1.png);
+    background-image: url(../images/icon1.png);
     background-repeat: no-repeat;
     background-position: 170px 15px;
 }
@@ -119,7 +119,7 @@ input[type=text] {
     display: inline-block;
     /* border: 2px solid yellow; */
     /* text-align: center; */
-    background-image: url(/images/inner_page_banner/who_we_help.jpg);
+    background-image: url(../images/inner_page_banner/who_we_help.jpg);
     background-repeat: repeat-y;
 }
 #textbox{
@@ -147,7 +147,7 @@ input[type=text] {
     background-color: #334d00;
 }
 .getstarted{
-    background-image: url(/images/icon4.png);
+    background-image: url(../images/icon4.png);
     background-repeat: no-repeat;
     background-position: 135px 18px;
 }
@@ -275,12 +275,12 @@ input[type=text] {
     background-color: #334d00;
 }
 #div2 #appointment{
-    background-image: url(/images/icon7.png);
+    background-image: url(../images/icon7.png);
     background-repeat: no-repeat;
     background-position: 180px 15px;
 }
 #div2 #consultant{
-    background-image: url(/images/icon6.png);
+    background-image: url(../images/icon6.png);
     background-repeat: no-repeat;
     background-position: 170px 15px;
 }
@@ -304,7 +304,7 @@ input[type=text] {
 }
 #div3 #post{
     color: gray;
-    list-style-image: url(/images/icon4.png);
+    list-style-image: url(../images/icon4.png);
     padding-left:15px;
     margin: 20px 0;
 }
@@ -313,7 +313,7 @@ input[type=text] {
 }
 #div3 #tweet{
     color: gray;
-    list-style-image: url(/images/icon9.png);
+    list-style-image: url(../images/icon9.png);
     padding-left:30px;
 }
 #div3 #tweet li{
