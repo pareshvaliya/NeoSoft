@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>VITAL partners</title>
     <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="icon" type="image/png" href="../images/list_style_image.png"/>
 </head>
 <body>
     <div id="main">
@@ -34,8 +35,21 @@
             </div>
         </header>
         <div id="section1">
-            <img src="../images/hbg3.png" alt="hbg3">
-            <!-- <p>abc</p> -->
+            <div id="download">
+                <img src="../images/icon5.png" alt="">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                <span><a href="#download" target="_blank">Download Now</a></span>
+                </p>
+            </div>
+            <div id="btn">
+                <a href="#bhtn">
+                    <img src="../images/video-play-btn.png" alt="btn">
+                </a>
+            </div>
+            <div id="contacttext">
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla quasi sapiente optio modi.</p>
+                <a id="contactus1"href="#">Contact Us Now!</a>
+            </div>
         </div>
         <div id="aboutus">
             <div id="text">
@@ -131,9 +145,62 @@
 
             </div>
         </div>
-        <div id="section4">
+        <!-- <div id="section4">
             <img src="../images/hbg7.png" alt="whatclientsay">
-        </div>
+        </div> -->
+        <div class="slidercontainer">  
+            <div class="showSlide fade">
+                <div class="section4">
+                    <div class="feedback1">
+                        <div id="whatclient">
+                            <p>What Our Client Say</p>
+                        </div>
+                        <div class="feedbackimg">
+                            <img id="f1" src="../images/aboutus_img.PNG" alt="no1">  
+                        </div>
+                        <div class="feedbacktext">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel molestias nobis accusantium a iure minus laboriosam inventore voluptate dolorum! Quod sunt aperiam eum odit dolores quae provident ab sapiente similique!</p>
+                            <p>-User 1</p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <div class="showSlide fade">  
+                <div class="section4">
+                    <div class="feedback1">
+                        <div id="whatclient">
+                            <p>What Our Client Say</p>
+                        </div>
+                        <div class="feedbackimg">
+                            <img id="f1" src="../images/user1.png" alt="no1">  
+                        </div>
+                        <div class="feedbacktext">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel molestias nobis accusantium a iure minus laboriosam inventore </p>
+                            <p>-User 2</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="showSlide fade">
+                <div class="section4">
+                    <div class="feedback1">
+                        <div id="whatclient">
+                            <p>What Our Client Say</p>
+                        </div>
+                        <div class="feedbackimg">
+                            <img id="f1" src="../images/user3.png" alt="no1">  
+                        </div>
+                        <div class="feedbacktext">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel molestias nobis accusantium a iure minus laboriosam inventore voluptate dolorum! Quod sunt aperiam eum odit dolores quae provident ab sapiente similique!</p>
+                            <p>-User 3</p>
+                        </div>
+                    </div>
+                </div>
+            </div>  
+            <!-- Navigation arrows -->  
+            <a class="left" onclick="nextSlide(-1)"><img src="../images/prev_btn.png" alt="prev"></a>  
+            <a class="right" onclick="nextSlide(1)"><img src="../images/next_btn.png" alt="next"></a>  
+        </div>  
         <div id="section5">
             <h1 style="text-indent: 400px;">Our Latest Blog</h1>
             <div class="blog">
@@ -243,6 +310,6 @@
         </footer>
     </div>
        
-    
+    <script src="../scripts/index.js"></script>
 </body>
 </html>
