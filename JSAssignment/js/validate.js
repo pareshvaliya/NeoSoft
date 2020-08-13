@@ -1,53 +1,65 @@
 function formvalidate()
 {
+    var flag = true;
     if(!nameValidate("fname","lblfname"))
     {
-        return false;
+        // return false;
+        flag = false;
     }
-    else if(!nameValidate("lname","lbllname"))
+    if(!nameValidate("lname","lbllname"))
+    {
+        // return false;
+        flag = false;
+    }
+    if(!numberValidate("pnumber","lblpnumber"))
+    {
+        // return false;
+        flag = false;
+    }
+    if(!numberValidate("onumber","lblonumber"))
+    {
+        // return false;
+        flag = false;
+    }
+    if(!emailValidate())
+    {
+        // return false;
+        flag = false;
+    }
+    if(!passwordValidate())
+    {
+        // return false;
+        flag = false;
+    }
+    if(!passwordMatch())
+    {
+        // return false;
+        flag = false;
+    }
+    if(!dobValidate())
+    {
+        // return false;
+        flag = false;
+    }
+    if(!genderValidate())
+    {
+        // return false;
+        flag = false;
+    }
+    if(!interestValidate())
+    {
+        // return false;
+        flag = false;
+    }
+    if(!aboutYouValidate())
+    {
+        // return false;
+        flag = false;
+    }
+    if(flag == false)
     {
         return false;
     }
-    else if(!numberValidate("pnumber","lblpnumber"))
-    {
-        return false;
-    }
-    else if(!numberValidate("onumber","lblonumber"))
-    {
-        return false;
-    }
-    else if(!emailValidate())
-    {
-        return false;
-    }
-    else if(!passwordValidate())
-    {
-        return false;
-    }
-    else if(!passwordMatch())
-    {
-        return false;
-    }
-    else if(!dobValidate())
-    {
-        return false;
-    }
-    else if(!genderValidate())
-    {
-        return false;
-    }
-    else if(!interestValidate())
-    {
-        return false;
-    }
-    else if(!aboutYouValidate())
-    {
-        return false;
-    }
-    else{
-        return true;
-    }
-    
 }
 function nameValidate(name,lbl)
 {
