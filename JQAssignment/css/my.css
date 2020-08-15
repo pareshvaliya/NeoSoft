@@ -1,0 +1,11 @@
+
+#form1 .error
+{
+    color: red;
+}
+#form1 .c1{
+    border: 2px solid red;
+}
+#form1 .c2{
+    border: 2px solid green;
+}

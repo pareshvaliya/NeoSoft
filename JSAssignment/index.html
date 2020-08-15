@@ -140,8 +140,8 @@
 						<li class="fileds">
 							<div class="phone_fileds">
 								<label>Phone No</label>
-								<input id="pnumber" name="phone" type="text" /> 
-								<p id="lblpnumber" style="color: red; visibility: hidden;">*mobile number must be of 10 digits</p>
+								<input id="pnumber" onchange="numberValidate('pnumber','lblpnumber')" name="phone" type="text" /> 
+								<p id="lblpnumber" style="color: red; visibility: hidden;">Phone number is required</p>
 							</div>
 							<div class="phone_fileds">
 								<label>Office No</label>
@@ -271,7 +271,8 @@
 						<li class="fileds">
 							<div class="age_fileds">
 								<label>Age</label>
-								<input id="age" name="age" type="text" onfocus="formvalidate()" readonly/>
+								<input id="age" name="age" type="text" onfocus="claculateAge()" readonly/>
+								<p id="lblage" style="color: red;visibility: hidden;">Please select valid date</p>
 							</div>
 							<div class="gender_fileds">
 								<label>Gender</label>

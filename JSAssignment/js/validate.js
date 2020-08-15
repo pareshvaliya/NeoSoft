@@ -81,6 +81,8 @@ function numberValidate(name,lbl)
 {
     var number = document.getElementById(name).value;
     var lblnumber = document.getElementById(lbl);
+
+    if(required(number,lblnumber)){
     var regex1 = /^[7-9][0-9]{9}$/;  // mobile no
     var regex2 = /^[0-9]{7,10}$/;  // phone no
     // console.log(name,lbl);
@@ -97,9 +99,12 @@ function numberValidate(name,lbl)
         return true;
     }
     else{
+        lblnumber.innerHTML="*mobile number must be of 10 digits";
         lblnumber.style.visibility="visible";
         return false;
     }
+}
+
 }
 function emailValidate()
 {
@@ -171,14 +176,50 @@ function dobValidate()
 }
 function claculateAge()
 {
-    var month = Number(document.getElementById("month").value);
-    var year = Number(document.getElementById("year").value);
+    
+    var month = document.getElementById("month").value;
+    var year = document.getElementById("year").value;
+    var day = document.getElementById("day").value;
     var age = document.getElementById("age");
-    var date = new Date();
-    var m = Math.abs(month - Number(date.getMonth()+1));
-    var y = date.getFullYear() - year;
-    var result = y+"."+m;
-    age.value = result;
+    var lblage = document.getElementById("lblage");
+    if(month != "select" && year != "select" && day != "select")
+    {
+      var date = new Date();
+      
+      var m = Number(month);
+      var cm = Number(date.getMonth()+1);
+      var y = Number(year);
+      var cy = date.getFullYear();
+      var d = Number(day);
+      var cd = date.getDate();
+      var mdiff = Math.abs(m-cm);
+      var ydiff = cy - y;
+      if(m>cm)
+      {
+        ydiff = ydiff-1;
+        mdiff = 12 -(m-cm);
+      }
+      if(d < cd)
+      {
+        mdiff = mdiff+1;
+      }
+      if(d > cd)
+      {
+        mdiff = mdiff-1;
+      }
+      if(m == cm && d>cd)
+      {
+        ydiff = ydiff-1;
+        mdiff = 12 - 1;
+      }
+      var result = ydiff+"."+mdiff;
+      age.value = result;
+      lblage.style.visibility="hidden";
+    }
+    else
+    {
+      lblage.style.visibility="visible";
+    }
 }
 function genderValidate()
 {
@@ -226,5 +267,19 @@ function aboutYouValidate()
     else{
         lblaboutyou.style.visibility="visible";
         return false;
+    }
+}
+
+function required(name,lblname)
+{
+    if(name.trim()=="")
+    {
+        lblname.style.innerHTML="required";
+        lblname.style.visibility="visible";
+        return false;
+    }
+    else{
+        lblname.style.visibility="hidden";
+        return true;
     }
 }
