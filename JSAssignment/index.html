@@ -127,12 +127,12 @@
 						<li class="fileds">
 							<div class="name_fileds">
 								<label>First Name</label>
-								<input id="fname" onchange="nameValidate('fname','lblfname')" name="firstname" type="text" />
+								<input id="fname" onkeyup="nameValidate('fname','lblfname')" name="firstname" type="text" />
 								<p id="lblfname" style="color: red; visibility: hidden;">*first name can't be blank </p>
 							</div>
 							<div class="name_fileds">
 								<label>Last Name</label>
-								<input id="lname" onchange="nameValidate('lname','lbllname')" name="lastname" type="text" /> 
+								<input id="lname" onkeyup="nameValidate('lname','lbllname')" name="lastname" type="text" /> 
 								<p id="lbllname" style="color: red; visibility: hidden;">*last name can't be blank </p>
 						
 							</div>
@@ -140,12 +140,12 @@
 						<li class="fileds">
 							<div class="phone_fileds">
 								<label>Phone No</label>
-								<input id="pnumber" onchange="numberValidate('pnumber','lblpnumber')" name="phone" type="text" /> 
+								<input id="pnumber" onkeyup="numberValidate('pnumber','lblpnumber')" name="phone" type="text" /> 
 								<p id="lblpnumber" style="color: red; visibility: hidden;">Phone number is required</p>
 							</div>
 							<div class="phone_fileds">
 								<label>Office No</label>
-								<input id="onumber" onchange="numberValidate('onumber','lblonumber')" name="office" type="text" />
+								<input id="onumber" onkeyup="numberValidate('onumber','lblonumber')" name="office" type="text" />
 								<p id="lblonumber" style="color: red; visibility: hidden;">Office number is required</p>
 							</div>
 						</li>					
@@ -157,7 +157,7 @@
 							</div>
 							<div class="pass_fileds">
 								<label>Password</label>
-								<input id="password" name="password" type="password" />
+								<input id="password" onkeyup="passwordValidate('password','lblpassword')" name="password" type="password" />
 								<p id="lblpassword" style="color: red;visibility: hidden; ">Password is mandatory</p>
 							</div>
 						</li>
