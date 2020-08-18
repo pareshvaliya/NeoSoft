@@ -63,6 +63,7 @@ function formvalidate()
 }
 function nameValidate(name,lbl)
 {
+    
     var fname = document.getElementById(name).value;
     var lblfname = document.getElementById(lbl);
     if(fname.trim()=="")
@@ -70,11 +71,19 @@ function nameValidate(name,lbl)
         lblfname.style.visibility="visible";
         return false;
     }
-    else{
+    if(!spaceValidate(fname,lblfname))
+    {
+        return false;
+    }
+    if(!specialChar(fname,lblfname))
+    {
+        return false;
+    }
+    // else{
         lblfname.style.visibility="hidden";
         // console.log(fname);
         return true;
-    }
+    // }
 }
 
 function numberValidate(name,lbl)
@@ -82,10 +91,25 @@ function numberValidate(name,lbl)
     var number = document.getElementById(name).value;
     var lblnumber = document.getElementById(lbl);
 
-    if(required(number,lblnumber)){
     var regex1 = /^[7-9][0-9]{9}$/;  // mobile no
     var regex2 = /^[0-9]{7,10}$/;  // phone no
     // console.log(name,lbl);
+    if(!required(number,lblnumber))
+    {
+        return false;
+    }
+    if(!spaceValidate(number,lblnumber))
+    {
+        return false;
+    }
+    if(!specialChar(number,lblnumber))
+    {
+        return false;
+    }
+    if(!letterValidate(number,lblnumber))
+    {
+        return false;
+    }
     if(name=="pnumber" && regex1.test(number))
     {
         lblnumber.style.visibility="hidden";
@@ -98,12 +122,16 @@ function numberValidate(name,lbl)
         // console.log(number);
         return true;
     }
-    else{
-        lblnumber.innerHTML="*mobile number must be of 10 digits";
+    else if(name=="pnumber"){
+        lblnumber.innerHTML="phone number must be of 10 digits";
         lblnumber.style.visibility="visible";
         return false;
     }
-}
+    else if(name=="onumber"){
+        lblnumber.innerHTML="phone number must have atleast 7 digits";
+        lblnumber.style.visibility="visible";
+        return false;
+    }
 
 }
 function emailValidate()
@@ -112,13 +140,22 @@ function emailValidate()
     var lblemail = document.getElementById("lblemail");
     var regex = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+)\.([a-z]{2,8})(\.[a-z]{2,8})?$/;
 
+    if(!required(email,lblemail))
+    {
+        return false;
+    }
     if(regex.test(email))
     {
         lblemail.style.visibility="hidden";
         // console.log(email);
         return true;
     }
+    if(!spaceValidate(email,lblemail))
+    {
+        return false;
+    }
     else{
+        lblemail.innerHTML="please enter a valid email"
         lblemail.style.visibility="visible";
         return false;
     }
@@ -129,6 +166,18 @@ function passwordValidate()
     var lblpassword = document.getElementById("lblpassword");
     var regex = /^[a-zA-Z0-9]{8,12}$/;
 
+    if(!required(password,lblpassword))
+    {
+        return false;
+    }
+    if(!spaceValidate(password,lblpassword))
+    {
+        return false;
+    }
+    if(!specialChar(password,lblpassword))
+    {
+        return false;
+    }
     if(regex.test(password))
     {
         lblpassword.style.visibility="hidden";
@@ -136,6 +185,7 @@ function passwordValidate()
         return true;
     }
     else{
+        lblpassword.innerHTML="password must be atleast 8 to 12 characters(only alphanumeric)"
         lblpassword.style.visibility="visible";
         return false;
     }
@@ -258,13 +308,19 @@ function aboutYouValidate()
     var aboutyou = document.getElementById("aboutyou").value;
     var lblaboutyou = document.getElementById("lblaboutyou");
     var regex = /^[a-zA-Z ]{10,100}$/;
+    
 
+    if(!required(aboutyou,lblaboutyou))
+    {
+        return false;
+    }
     if(regex.test(aboutyou))
     {
         lblaboutyou.style.visibility="hidden";
         return true;
     }
     else{
+        lblaboutyou.innerHTML="minimum 10 character required"
         lblaboutyou.style.visibility="visible";
         return false;
     }
@@ -279,6 +335,56 @@ function required(name,lblname)
         return false;
     }
     else{
+        lblname.style.visibility="hidden";
+        return true;
+    }
+}
+function specialChar(name,lblname)
+{
+    let res=/\W/g;
+    // let rea = /[@&\/\\#,+()$~%.'":*?<>{}]/g;
+    if(res.test(name))
+    {
+        // alert(name);
+        lblname.innerHTML="Special characters are not allowed";
+        lblname.style.visibility="visible";
+        return false;
+    }
+    else
+    {
+        lblname.style.visibility="hidden";
+        return true;
+    }
+    
+}
+
+function spaceValidate(name,lblname)
+{
+    let re = /\s/g;
+    if(re.test(name))
+    {
+        lblname.innerHTML="space are not allowed";
+        lblname.style.visibility="visible";
+        return false;
+    }
+    else
+    {
+        // lblfname.innerHTML="name is mandatory";
+        lblname.style.visibility="hidden";
+        return true;
+    }
+}
+function letterValidate(name,lblname)
+{
+    let rel = /\w\D/g;
+    if(rel.test(name))
+    {
+        lblname.innerHTML="letters are not allowed";
+        lblname.style.visibility="visible";
+        return false;
+    }
+    else
+    {
         lblname.style.visibility="hidden";
         return true;
     }

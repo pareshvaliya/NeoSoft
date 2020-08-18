@@ -27,7 +27,7 @@
 <link href="css/jquery.bxslider.css" rel="stylesheet" />
 <!-- Responsive -->
 <link href="css/responsive.css" rel="stylesheet" />
-<link rel="stylesheet" href="/css/my.css">
+<!-- <link rel="stylesheet" href="/"> -->
 
 
 </head>
@@ -92,7 +92,7 @@
 				<ul>
 					<li class="active">
 						<div class="box">
-							<img src="..images/no_1.png" alt=""> 
+							<img src="images/no_1.png" alt=""> 
 							<span>
 								<span>YOUR</span> PROFILE
 							</span>
@@ -127,12 +127,12 @@
 						<li class="fileds">
 							<div class="name_fileds">
 								<label>First Name</label>
-								<input id="fname" name="firstname" type="text" />
+								<input id="fname" onchange="nameValidate('fname','lblfname')" name="firstname" type="text" />
 								<p id="lblfname" style="color: red; visibility: hidden;">*first name can't be blank </p>
 							</div>
 							<div class="name_fileds">
 								<label>Last Name</label>
-								<input id="lname" name="lastname" type="text" /> 
+								<input id="lname" onchange="nameValidate('lname','lbllname')" name="lastname" type="text" /> 
 								<p id="lbllname" style="color: red; visibility: hidden;">*last name can't be blank </p>
 						
 							</div>
@@ -145,20 +145,20 @@
 							</div>
 							<div class="phone_fileds">
 								<label>Office No</label>
-								<input id="onumber" name="office" type="text" />
-								<p id="lblonumber" style="color: red; visibility: hidden;">*number must be atleast 7 digits</p>
+								<input id="onumber" onchange="numberValidate('onumber','lblonumber')" name="office" type="text" />
+								<p id="lblonumber" style="color: red; visibility: hidden;">Office number is required</p>
 							</div>
 						</li>					
 						<li class="fileds">
 							<div class="email_fileds">
 								<label>Email</label>
 								<input id="email" name="email" type="text" />
-								<p id="lblemail" style="color: red; visibility: hidden;">*email must contain @ and .</p>
+								<p id="lblemail" style="color: red; visibility: hidden;">Email is required</p>
 							</div>
 							<div class="pass_fileds">
 								<label>Password</label>
 								<input id="password" name="password" type="password" />
-								<p id="lblpassword" style="color: red;visibility: hidden; ">*password must be atleast 8 to 12 characters(only alphanumeric) </p>
+								<p id="lblpassword" style="color: red;visibility: hidden; ">Password is mandatory</p>
 							</div>
 						</li>
 						<li class="fileds">
@@ -277,8 +277,8 @@
 							<div class="gender_fileds">
 								<label>Gender</label>
 								<ul>
-									<li><input type="radio" class="radio" id="residence1" name="radio" /><label class="radio-label" for="residence1">Male</label></li>
-									<li><input type="radio" class="radio" id="residence2" name="radio" /><label class="radio-label" for="residence2">Female</label></li>
+									<li><input type="radio" class="radio" onclick="genderValidate()" id="residence1" name="radio" /><label class="radio-label" for="residence1">Male</label></li>
+									<li><input type="radio" class="radio" onclick="genderValidate()" id="residence2" name="radio" /><label class="radio-label" for="residence2">Female</label></li>
 								</ul>
 								<p id="lblgender" style="color: red; visibility: hidden;">* required</p>	
 							</div>
@@ -287,16 +287,16 @@
 							<div class="interest_fileds">
 							<label>Interest</label>
 								<ul>
-									<li><input type="checkbox" class="checkbox" id="checkbox_sample18" /> <label class="css-label" for="checkbox_sample18">Biking</label></li>
-									<li><input type="checkbox" class="checkbox" id="checkbox_sample19" /> <label class="css-label" for="checkbox_sample19">Reading</label></li>
-									<li><input type="checkbox" class="checkbox" id="checkbox_sample20" /> <label class="css-label" for="checkbox_sample20">Playing</label></li>
+									<li><input type="checkbox" onclick="interestValidate()" class="checkbox" id="checkbox_sample18" /> <label class="css-label" for="checkbox_sample18">Biking</label></li>
+									<li><input type="checkbox" onclick="interestValidate()" class="checkbox" id="checkbox_sample19" /> <label class="css-label" for="checkbox_sample19">Reading</label></li>
+									<li><input type="checkbox"  onclick="interestValidate()" class="checkbox" id="checkbox_sample20" /> <label class="css-label" for="checkbox_sample20">Playing</label></li>
 								</ul>
 								<p id="lblinterest" style="color: red;visibility: hidden; ">*please select atleast one</p>
 							</div>
 							<div class="about_you_fileds">
 							<label>About you</label>
 							<textarea id="aboutyou"></textarea>
-							<p id="lblaboutyou" style="color: red;visibility: hidden; ">* minimum 10 character required</p>
+							<p id="lblaboutyou" style="color: red;visibility: hidden; ">about you is mandatory</p>
 							</div>						
 						</li>
 					</ul>
@@ -476,11 +476,11 @@ Live a life without regrets and take action today!</p>
    Sticky Contact Number End-->
 
 </div>
-<script type="text/javascript">
+<!-- <script type="text/javascript">
 	$(document).ready(function(){
 	  $('.bxslider').bxSlider();
 	});
-</script>
+</script> -->
 <!--wrapper-starts-->
 
 <script type="text/javascript" src="js/jquery.js"></script>	
@@ -496,6 +496,6 @@ Live a life without regrets and take action today!</p>
 		});
 	});
 </script>
-<script src="../js/validate.js"></script>
+<script src="js/validate.js"></script>
 </body>
 </html>

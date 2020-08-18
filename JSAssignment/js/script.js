@@ -1,6 +1,6 @@
 // JavaScript Document
 jQuery(document).ready(function() {
-		<!-- Js for Menu -->	
+		// <!-- Js for Menu -->
 	
 		jQuery(".toggle_menu a").click(function () {
 			jQuery("#topMenu").slideToggle("fast");
@@ -32,12 +32,12 @@ jQuery(document).ready(function() {
 			  $(this).find('img').stop().fadeTo('fast', 0.7);  
 		});  */
 		
-		$('.bxslider1').bxSlider({
-			captions: true,
-			auto:true,
-			controls:false,				
-			pager: false	
-		});
+		// $('.bxslider1').bxSlider({
+		// 	captions: true,
+		// 	auto:true,
+		// 	controls:false,				
+		// 	pager: false	
+		// });
 
 
 	/* Fixed Header */
