@@ -163,29 +163,29 @@ $(document).ready(function () {
 
         messages: {
           firstname: {
-            required:"*first name is mandatory",
-            nowhitespace:"*space is not allowed",
+            required:"first name is mandatory",
+            nowhitespace:"space is not allowed",
             alphanumeric:"special characters are not allowed(only alphanumeric)"
           },
           lastname: {
-            required:"*last name is mandatory",
-            nowhitespace:"*space is not allowed",
+            required:"last name is mandatory",
+            nowhitespace:"space is not allowed",
             alphanumeric:"special characters are not allowed(only alphanumeric)"
           },
           email: {
-            required:"*email is mandatory",
-            nowhitespace:"*space is not allowed",
-            email:"*please enter a valid email"
+            required:"email is mandatory",
+            nowhitespace:"space is not allowed",
+            email:"please enter a valid email"
           },
           password: {
-            required:"*Password is mandatory",
-            nowhitespace:"*space is not allowed",
+            required:"Password is mandatory",
+            nowhitespace:"space is not allowed",
             alphanumeric:"special characters are not allowed(only alphanumeric)",
             rangelength:"password must be 8 to 12 character long"
           },
           cpassword: {
-            required: "*Enter a same password",
-            equalTo:"*password doesn't matches"
+            required: "Enter a same password",
+            equalTo:"password doesn't matches"
           },
           phone:{
             required:"phone number is mandatory",
