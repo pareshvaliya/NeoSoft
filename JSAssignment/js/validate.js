@@ -79,6 +79,13 @@ function nameValidate(name,lbl)
     {
         return false;
     }
+    if(fname.length < 3)
+    {
+        lblfname.innerHTML="minimum 3 characters are required";
+        lblfname.style.visibility="visible";
+        return false;
+    }
+
     // else{
         lblfname.style.visibility="hidden";
         // console.log(fname);
@@ -330,7 +337,7 @@ function required(name,lblname)
 {
     if(name.trim()=="")
     {
-        lblname.style.innerHTML="required";
+        // lblname.innerHTML="required";
         lblname.style.visibility="visible";
         return false;
     }
