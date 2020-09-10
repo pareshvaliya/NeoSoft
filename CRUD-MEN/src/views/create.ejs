@@ -1,0 +1,12 @@
+<div class="container pt-3">
+    <form action="/user/save" method="post" class="was-validated">
+        <label for="fname">User : </label>
+        <% if(typeof error != 'undefined') {%>
+            <input type="text" id="user" name="fname" value="<%= error[0].value %>" required>
+            <p style="color: red;"><%= error[0].msg %></p>
+        <% } else{%> 
+            <input type="text" id="user" name="fname" required>
+        <% } %> 
+        <button style="color: initial;text-decoration: none;" class="btn btn-success" type="submit">Save</button>
+    </form>
+</div>

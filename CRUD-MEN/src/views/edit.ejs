@@ -1,0 +1,7 @@
+<div class="container pt-3">
+    <form action="/user/update?id=<%= data._id %>" method="post">
+        <label for="item">User : </label>
+        <input type="text" id="user" name="fname" value="<%= data.fname %> ">
+        <button type="submit" class="btn btn-info">Update</button>
+    </form>
+</div>

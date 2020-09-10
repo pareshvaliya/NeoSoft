@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <style>
+        body{
+            background-color: lightblue;
+            text-align: center;
+        }
+        h1{
+            font-size: xx-large;
+        }
+        p{
+            font-size: large;
+        }
+    </style>
+</head>
+<body> 
+    <%- include("partials/header.ejs") %>
+    <h1>This is the Registration Page </h1>
+    <form action="/register" method="POST">
+        <label for="fname">First Name</label>
+        <input type="text" name="fname">
+        <br>
+        <br>
+        <label for="lname">Lastt Name</label>
+        <input type="text" name="lname">
+        <br>
+        <br>
+        <label for="email">Email</label>
+        <input type="text" name='email'>
+        <br><br>
+        <label for="pnumber">Phone number</label>
+        <input type="text" name="pnumber">
+        <br><br>
+        <input type="submit" value="submit">
+    </form>
+    
+</body>
+</html>
